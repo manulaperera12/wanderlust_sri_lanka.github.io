@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: darkgrey;
+}
+.logo{
+  border-radius: 54px;
+}
+
+div.main {
+  width: 800px;
+  margin: 60px auto 0px auto;
+  text-align: left;
+  margin-top: 10vh;
+}
+
+h2 {
+  text-align: center;
+  padding: 30px;
+  font-family: sans-serif;
+}
+div.regi {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  font-size: 22px;
+  border-radius: 10px;
+  border: 1px soid rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+#div {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  font-size: 22px;
+  border-radius: 10px;
+  border: 1px soid rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  width: 800px;
+  margin: 50px auto 0px auto;
+  text-align: center;
+}
+
+form#register {
+  margin: 30px;
+}
+label {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+input#name {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: 0;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+#a {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: 0;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+label,
+h2 {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 60px;
+}
+
+textarea {
+  padding: 0.9rem 1rem;
+  min-height: 80px;
+  margin: auto;
+  min-width: 300px;
+}
+#submitButton,
+#edit,
+#send {
+  padding: 10px 15px;
+  border-radius: 54px;
+  margin: 20px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  border: 2px solid blue;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, transparent 50%, rgb(63, 62, 62) 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.4s;
+}
+
+#submitButton:hover {
+  background-position: right;
+  color: white;
+}
+#div {
+  display: none;
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 5rem;
+  margin-bottom: 120px;
+  width: 98.5vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.fcss a,
+.fcss a:visited {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: all 1s ease;
+}
+
+.fcss a:hover {
+  color: #ff6565;
+}
+
+.fcss a span {
+  border-left: 3px solid #ff6565;
+  padding-left: 5px;
+}

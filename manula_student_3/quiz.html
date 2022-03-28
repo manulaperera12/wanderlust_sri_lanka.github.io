@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Quiz</title>
+    <link rel="stylesheet" href="quizStyles.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="quizScript.js"></script>
+</head>
+
+<body>
+
+    <div class="page-title">
+        <h1 class="welcome"> WELCOME TO QUIZ</h1>
+    </div>
+    <div class="container">
+
+        <div id="home" class="flex-center flex-column">
+            <!------------------------------ Header (Topic) ------------------------------------------->
+
+
+            <div>
+                <h1 class="title"> Rules & Regulations.</h1>
+            </div>
+            <div>
+                <ul class="a">
+                    <li>You have 60 secconds to complete the quiz.</li>
+                    <li>You have 10 questions.</li>
+                    <li>You will get 2 marks for correct answwers.</li>
+                    <li>1 mark will be deducted for each incorrect answer.</li>
+                </ul>
+                <div>
+                    <br/><br/><br/>
+                    <!---- Popup box 1 button (to open question box) ----->
+                    <button class="btn-popup1" onclick="togglePopup1()">Start Quiz</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!------------------------------ Popup box 1 (questions) ------------------------------------------->
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <!---- Close button (close the popup box) ----->
+            <div class="close-btn" onclick="togglePopup1()">&times;</div>
+            <div class="body">
+                <div id="game" class="justify-center flex-column hidden">
+                    <!---- Starting questions as form ----->
+                    <form name="quiz" onsubmit="return getRadioValue()">
+
+                        <!---- Close button (close the popup box) ----->
+                        <div class="header">
+                            <div class="parent">
+                                <div id="countdown" class="timer"></div>
+                            </div>
+                        </div>
+
+                        <div class="questions">
+                            <h1>What is the famous Botanical Garden in Kandy?</h1>
+                            <label for="a">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a" type="radio" name="q1" value="a">
+                                        Peradeniya Garden.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b" type="radio" name="q1" value="b">
+                                        Haggala Garden.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c" type="radio" name="q1" value="c">
+                                        Seethaeliya Garden.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d" type="radio" name="q1" value="d">
+                                        Kandy Garden.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <div class="questions">
+                            <h1>The famous 'Star Fort' is situated at which city?</h1>
+                            <label for="a.2">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.2" type="radio" name="q2" value="a">
+                                        Galle.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.2">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.2" type="radio" name="q2" value="b">
+                                        Hikkaduwa.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.2">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.2" type="radio" name="q2" value="c">
+                                        Mathara.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.2">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.2" type="radio" name="q2" value="d">
+                                        Ambalangoda.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>Name of the biggest Botanical garden in Nuwara Eliya is,</h1>
+                            <label for="a.3">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.3" type="radio" name="q3" value="a">
+                                        Diyathalawa Gardens.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.3">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.3" type="radio" name="q3" value="b">
+                                        Peradeniya Gardens.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.3">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.3" type="radio" name="q3" value="c">
+                                        Hakgala Gardens.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.3">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.3" type="radio" name="q3" value="d">
+                                        Yakkala Gardens.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>What is the best place to see Elephants activities in Sri Lanka?</h1>
+                            <label for="a.4">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.4" type="radio" name="q4" value="a">
+                                        Panamure.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.4">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.4" type="radio" name="q4" value="b">
+                                        Kumana.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.4">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.4" type="radio" name="q4" value="c">
+                                        Singharaja.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.4">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.4" type="radio" name="q4" value="d">
+                                        Pinnawala.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>Where is the famous bridge with Nine arches in Sri Lanka?</h1>
+                            <label for="a.5">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.5" type="radio" name="q5" value="a">
+                                        Hatton.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.5">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.5" type="radio" name="q5" value="b">
+                                        Nawalapitiya.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.5">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.5" type="radio" name="q5" value="c">
+                                        Thalawakale.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.5">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.5" type="radio" name="q5" value="d">
+                                        Demodara
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>What is the best place to see wild animals with there natural behaviors?</h1>
+                            <label for="a.6">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.6" type="radio" name="q6" value="a">
+                                        Sinharaja Forest.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.6">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.6" type="radio" name="q6" value="b">
+                                        Hambanthota National Park.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.6">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.6" type="radio" name="q6" value="c">
+                                        Yala National Park.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.6">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.6" type="radio" name="q6" value="d">
+                                        Deniyaya National Park.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>What is the place to see Sri Lankan's anciant prescores climbing through the lion's mouth?</h1>
+                            <label for="a.7">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.7" type="radio" name="q7" value="a">
+                                        Seegiriya.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.7">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.7" type="radio" name="q7" value="b">
+                                        Mihinthale.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.7">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.7" type="radio" name="q7" value="c">
+                                        Polonnaruwa.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.7">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.7" type="radio" name="q7" value="d">
+                                        Sri Pada.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>What is the place always dropping water from the root of temple?</h1>
+                            <label for="a.8">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.8" type="radio" name="q8" value="a">
+                                        Rankoth Viharaya Temple.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.8">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.8" type="radio" name="q8" value="b">
+                                        Kirivehera Temple.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.8">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.8" type="radio" name="q8" value="c">
+                                        Kalani Viharaya Temple.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.8">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.8" type="radio" name="q8" value="d">
+                                        Dabulla Care Temple.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>What is the place of Sri Lankan's Southern cost line to see culturel finishing style?</h1>
+                            <label for="a.9">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.9" type="radio" name="q9" value="a">
+                                        Polhena Beach.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.9">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.9" type="radio" name="q9" value="b">
+                                        Tangalle Beach.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.9">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.9" type="radio" name="q9" value="c">
+                                        Mirissa Beach.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.9">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.9" type="radio" name="q9" value="d">
+                                        Hikkaduwa Beach.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="questions">
+                            <h1>What is the place to buy best Sri Lankan tea?</h1>
+                            <label for="a.10">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">A</p>
+                                    <p class="choice-text">
+                                        <input id="a.10" type="radio" name="q10" value="a">
+                                        Delmon Tea Estate.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="b.10">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">B</p>
+                                    <p class="choice-text">
+                                        <input id="b.10" type="radio" name="q10" value="b">
+                                        Pedro Tea Estate.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="c.10">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">C</p>
+                                    <p class="choice-text">
+                                        <input id="c.10" type="radio" name="q10" value="c">
+                                        Thalawakale Tea.
+                                    </p>
+                                </div>
+                            </label>
+
+                            <label for="d.10">
+                                <div class="choice-container">
+                                    <p class="choice-prefix">D</p>
+                                    <p class="choice-text">
+                                        <input id="d.10" type="radio" name="q10" value="d">
+                                        Uwa Ben Head.
+                                    </p>
+                                </div>
+                            </label>
+                        </div><br/>
+                </div>
+
+                <!---- Submit button (When this button clicked close the popup box 1 and then open popup box 2)----->
+                <div class="close-btn-submit" onclick="togglePopup1()">
+                    <button class="btn" type="submit" onclick="togglePopup2()">Submit</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!------------------------------ Popup box 2 (results) ------------------------------------------->
+    <div class="popup2" id="popup-2">
+        <div class="overlay2"></div>
+        <div class="content2">
+            <!---- Close button (close the popup box) ----->
+            <div class="close-btn2" onclick="togglePopup2()">&times;</div>
+            <div class="body">
+
+                <!---- Results ----->
+                <div id="results" class="resultText">
+                    <h1>Your Score: Not yet attempted</h1>
+                </div>
+
+                <!---- Button for close popup box 2 and navigate to the quiz page ----->
+                <div class="close-btn-submit" onclick="togglePopup2()">
+                    <button class="btn" type="submit"><a href="quiz.html">Quiz Page</a></button>
+                </div>
+
+                <!---- Button for close popup box 2 and restart the quiz by opening popup box 1(qestions) ----->
+                <div class="close-btn-submit" onclick="togglePopup2()">
+                    <button class="btn" type="submit" onclick="togglePopup1()">Restart</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="quizScript.js"></script>
+
+</body>
+
+</html>
