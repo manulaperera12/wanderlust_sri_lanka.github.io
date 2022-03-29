@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+
+    <!-- link the css files, and title img with the html code -->
+    <link rel="stylesheet" href="../CSS/Theme_Styles.css">
+    <link rel="stylesheet" href="../CSS/Gallery_Styles.css">
+    <link rel="icon" href="../Web_page_logo/web_logo.jpg" type="image/jpg" sizes="16x16">
+
+</head>
+
+<body id="bodyColor">
+
+    <!-- main navigation bar -->
+    <div>
+        <!-- main navigation links-->
+        <nav class="nav-links">
+            <img class="logo" src="../Web_page_logo/web_logo.jpg" alt="logo" usemap="#logo">
+            <map name="logo">
+		<area shape="circle" coords="45,42,38" href="#Home.html" alt="logo">
+	</map>
+            <ul>
+                <li><a class="active" href="#Home">Home</a></li>
+                <li><a href="HTML/Gallery.html">Gallery</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Quiz.html">Quiz</a></li>
+                <li><a href="#Contact_Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- dropdown list for change the background color -->
+        <div class="dropdown"><img class="BGimg" src="../Logos/bgColor.png" alt="BG Color Change Icon" width="20" height="20" /><br>
+            <button class="dropbtn">Background</button>
+            <div class="dropdown-content">
+                <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#ADD8E6">Blue</button>
+                <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#3CB371">Green</button>
+                <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#FFC000">Yellow</button>
+                <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#FFB6C1">Pink</button>
+                <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#DC143C">Red</button>
+                <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="black">Black</button>
+            </div>
+        </div>
+
+        <!-- dropdown list for change the text color -->
+        <div class="dropdown"><img class="Timg" src="../Logos/textColor.png" alt="Text Color Change Icon" width="20" height="20" /><br>
+            <button class="dropbtn">Text</button>
+            <div class="dropdown-content">
+                <button class="dropdownItem" onclick="changeTextColor(this)" value="#89CFF0">Blue</button>
+                <button class="dropdownItem" onclick="changeTextColor(this)" value="#4ce615">Green</button>
+                <button class="dropdownItem" onclick="changeTextColor(this)" value="#FFFF8F">Yellow</button>
+                <button class="dropdownItem" onclick="changeTextColor(this)" value="#FFB6C1">Pink</button>
+                <button class="dropdownItem" onclick="changeTextColor(this)" value="#991515">Red</button>
+                <button class="dropdownItem" onclick="changeTextColor(this)" value="white">White</button>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 id="gallery">Gallery</h1>
+    <hr>
+
+    <!-- display five thumbnail images and image boxes in row -->
+    <div class="imagesInRow">
+        <div class="imageBox">
+            <div class="imagesItem">
+                <img class="hover-shadow cursor" id="SigiriyaRock" src="../Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+            </div>
+        </div>
+
+        <div class="imageBox">
+            <div class="imagesItem">
+                <img class="hover-shadow cursor" id="GalleFort" src="../Gallery_img/Galle_fort.jpg" alt="Galle Fort" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+            </div>
+        </div>
+
+        <div class="imageBox">
+            <div class="imagesItem">
+                <img class="hover-shadow cursor" id="NineArch" src="../Gallery_img/9_Arch.jpg" alt="Nine Arch" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+            </div>
+        </div>
+
+        <div class="imageBox">
+            <div class="imagesItem">
+                <img class="hover-shadow cursor" id="Isurumuniya" src="../Gallery_img/Isurumuniya.jpg" alt="Isurumuniya" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+            </div>
+        </div>
+
+        <div class="imageBox">
+            <div class="imagesItem">
+                <img class="hover-shadow cursor" id="HikkaCorals" src="../Gallery_img/Corals_hikka.jpg" alt="Hikkaduwa Corals" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- Display the main image in wide area-->
+    <div class="mainImgBox" id="mainImg">
+        <img class="image" id="imageAndDescription" src="../Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" width="755" height="450">
+        <div class="imageDescription" id="imgtext"></div>
+
+        <!-- radio buttons ro change the image -->
+        <input type="image" name="changeImg" id="img1" src="../Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" onclick="showWideAreaImage(this);">
+        <input type="image" name="changeImg" id="img2" src="../Gallery_img/Galle_fort.jpg" alt="Galle Fort" onclick="showWideAreaImage(this)">
+        <input type="image" name="changeImg" id="img3" src="../Gallery_img/9_Arch.jpg" alt="Nine Arch" onclick="showWideAreaImage(this)">
+        <input type="image" name="changeImg" id="img4" src="../Gallery_img/Isurumuniya.jpg" alt="Isurumuniya" onclick="showWideAreaImage(this)">
+        <input type="image" name="changeImg" id="img5" src="../Gallery_img/Corals_hikka.jpg" alt="Hikkaduwa Corals" onclick="showWideAreaImage(this)">
+
+        <!-- representative of the radio buttons -->
+        <div class="sliderRadioBtns">
+            <label for="img1" class="radioBtn" id="btn1"></label>
+            <label for="img2" class="radioBtn" id="btn2"></label>
+            <label for="img3" class="radioBtn" id="btn3"></label>
+            <label for="img4" class="radioBtn" id="btn4"></label>
+            <label for="img5" class="radioBtn" id="btn5"></label>
+        </div>
+    </div>
+    <br>
+
+    <!-- Back to top icon -->
+    <a class="topIcon" id="myBtn" href="#"><img class="topButton" src="../Logos/top_icon.jpg" alt="Page up logo" width="40" height="40" /></a>
+    <br>
+    <hr>
+
+
+    <!-- Start of JavaScript -->
+    <script>
+        //Expands image on mouseover and shows the relevant description to it
+        function showWideAreaImage(images) {
+            var expandImage = document.getElementById("imageAndDescription"); //main image ID
+            var imgText = document.getElementById("imgtext"); //Image text ID
+            expandImage.src = images.src; //replace image as relevant by assigning the new src name to
+            expandImage.parentElement.style.display;
+            var heading = images.alt; //save the value of the alt attribute of the object passe to the variable
+
+            //Make all the radio representative's background transparent
+            document.getElementById("btn1").style.background = "transparent";
+            document.getElementById("btn2").style.background = "transparent";
+            document.getElementById("btn3").style.background = "transparent";
+            document.getElementById("btn4").style.background = "transparent";
+            document.getElementById("btn5").style.background = "transparent";
+
+            //switch to the relevant occasion by matching with the alt attribute.
+            switch (heading) {
+                case "Sigiriya Rock Fortress":
+                    imgText.innerHTML = "<h2><u>Sigiriya Rock Fortress, Dabulla</u></h2><p>Sigiriya is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka. According to ancient chronicle\n \"Chulavansa\", King Kashyapa built his palace in 4th century AD on top of the hill and chose to rule from Sigiriya.   He moved to Sigiriya which was well secured by its natural surroundings as he was fearing enemy attacks.</p>" +
+                        "<p>There are several rock shelters and caves within the main rock with inscriptions and beautiful paintings popularly known as Sigiri Frescoes. Ruins of the garden city around the main rock with fountains and ponds could be seen even today. Therefore Sigiriya is considered to be one of the most important urban planning sites of the first millennium and attracts thousands of tourists every year. Sigiriya is a UNESCO listed world heritage site.</p>";
+                    document.getElementById("btn1").style.background = "#ADD8E6";
+                    break;
+                case "Galle Fort":
+                    imgText.innerHTML = "<h2><u>Galle Fort, Galle</u></h2><p>Galle Fort, in the Bay of Galle on the southwest coast of Sri Lanka, was built first in 1588 by the Portuguese, then extensively fortified by the Dutch during the 17th century from 1649 onwards. It is a historical, archaeological and architectural heritage monument, which even after more than 432 years maintains a polished appearance, due to extensive reconstruction work done by Archaeological Department of Sri Lanka.</p>" +
+                        "<p>As many ancient buildings including Dutch Reformed Church and All Saints Church within the fort have been resorted to its past glory, this place is a major tourist attraction. The heritage value of the Fort has been recognised by the UNESCO and declared as a world heritage site.</p>";
+                    document.getElementById("btn2").style.background = "#ADD8E6";
+                    break;
+                case "Nine Arch":
+                    imgText.innerHTML = "<h2><u>Nine Arch, Demodara</u></h2><p>The Nine Arch Bridge also called the Bridge in the Sky, is a viaduct bridge in Sri Lanka. It is one of the best examples of colonial-era railway construction in the country. It is located in Demodara, between Ella and Demodara railway stations. </p>" +
+                        "<p>The construction of the bridge is generally attributed to a local Ceylonese builder, P. K. Appuhami, in consultation with British engineers. The chief designer and project manager of the 'upcountry railway line of Ceylon' project was D. J. Wimalasurendra, a distinguished Ceylonese engineer and inventor. The designer of the viaduct was Harold Cuthbert Marwood of Railway Construction Department of Ceylon Government Railway. The 1923 report titled \"Construction of a Concrete Railway Viaduct in Ceylon\" published by the Engineering Association of Ceylon has details of all the records including the plans and drawings.</p>";
+                    document.getElementById("btn3").style.background = "#ADD8E6";
+                    break;
+                case "Isurumuniya":
+                    imgText.innerHTML = "<h2><u>Isurumuniya Temple, Anuradhapura</u></h2><p>Isurumuniya is a Buddhist temple situated near to the Tissa Wewa (Tisa tank) in Anuradhapura, Sri Lanka. There are four carvings of special interest in this Vihara. They are the Isurumuniya Lovers, Elephant Pond and The Royal Family.</p>" +
+                        "<p>This is the place where the mythical Pulasthi Rishi was said to live and the place of which the mythical King Ravana was born. The temple was built by King Devanampiya Tissa (307 BC to 267 BC) who ruled in the ancient Sri Lankan capital of Anuradhapura. After 500 children of high-caste were ordained, Isurumuniya was built for them to reside. King Kasyapa I (473-491 AD) again renovated this viharaya and named it as \"Boupulvan, Kasubgiri Radmaha Vehera\". This name is derived from names of his 2 daughters and his name. There is a viharaya connected to a cave and above is a cliff. A small stupa is built on it. On the rock is carved the figure of a horse.</p>";
+                    document.getElementById("btn4").style.background = "#ADD8E6";
+                    break;
+                case "Hikkaduwa Corals":
+                    imgText.innerHTML = "<h2><u>Hikkaduwa Corals, Hikkaduwa</u></h2><p>Hikkaduwa coral reef is a typical shallow fringing reef with an average depth of around 5 metres (16 ft). The coral reef reduces the coastal erosion and forms a natural breakwater. The coast of the national park extends four km. Generally the coast is narrow, ranging from 5–50 m according to the climatic conditions of the year. Scuba diving is a popular recreation here.</p>";
+                    document.getElementById("btn5").style.background = "#ADD8E6";
+                    break;
+            }
+        }
+
+        //changes background color
+        function changeBackgroundColor(color) {
+            var colorChange = color.value;
+            document.body.style.backgroundImage = "none"; //disappears the background image
+            document.getElementById("bodyColor").style.backgroundColor = colorChange; //change the BG color
+        }
+
+        //Changes text color
+        function changeTextColor(color) {
+            var colorChange = color.value;
+            document.getElementById("imgtext").style.color = colorChange; //change the color of text of the description
+            document.getElementById("bodyColor").style.color = colorChange; //change the text color of the body
+            document.getElementById("gallery").style.color = colorChange; //change the color of the <h1> element
+        }
+
+        var topBtn = document.getElementById("myBtn");
+
+        // When the user scrolls down 100px from the top of the document, show the icon
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function navigateToMainImg() {
+            document.body.scrollDown = 520;
+            document.documentElement.scrollTop = 520;
+        }
+    </script>
+    <!-- End of the JavaScript -->
+
+
+    <!-- footer with link to page editor, about us page and site map -->
+    <section>
+        <div>
+            <footer>
+                <div class="container-footer">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Developers</h4>
+                            <div>
+                                <p><a href="#student.html"> Manula Perera</a></p>
+                                <p><a href="#student.html"> Thanuja Sathsara</a></p>
+                                <p><a href="#student.html"> Harini Abeysirigunawardena</a></p>
+                                <p><a href="student4.html"> Adithi Abeywardena</a></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4><a href="#AboutUs">About Us</a></h4>
+                        </div>
+                        <div class="col">
+                            <h4><a href="svgSiteMap.html">Sitemap</a></h4>
+                        </div>
+                        <img class="footer-logo" src="../Web_page_logo/web_logo.jpg" alt="logo">
+                    </div>
+                </div>
+                <p class="editor">
+                    <a href="student4.html">Editor: Adithi Abeywardena</a>
+                </p>
+            </footer>
+        </div>
+    </section>
+</body>
+
+</html>

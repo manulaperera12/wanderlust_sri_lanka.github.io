@@ -1,0 +1,72 @@
+h1
+{
+	font-family:cursive;
+	color: white;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 50px;
+}
+text
+{
+	font-size: 18px;
+    fill: black;
+}
+path{
+    stroke: white;
+    stroke-width: 4;
+    fill: none;
+}
+
+.box
+{
+    stroke-width: 3;
+    stroke: red;
+}
+
+.colourRep
+{
+    stroke-width: 2;
+    stroke: azure;
+}
+
+
+
+#MainPage
+{
+    fill: white;
+}
+
+#HPage
+{
+    fill: white;
+}
+
+#Floor1
+{
+    fill: white;
+}
+
+#Floor2
+{
+    fill: white;
+}
+
+#Floor3
+{
+    fill: white;
+}
+
+.topIcon{
+    position: fixed;
+    width: 40px;
+    height: 42px;
+    background: white;
+    bottom: 60px;
+    right: 50px;
+    text-align: center;
+}
+
+.editor
+{
+    float: right;
+}
