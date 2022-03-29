@@ -367,3 +367,45 @@ a {
 input {
     float: left;
 }
+
+
+/* Footer Styles */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5vh;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #56a5eb;
+    bottom: 0;
+    background-color: #ecf5ff;
+    opacity: 0.75;
+}
+
+.deve a,
+.deve a:visited {
+    text-decoration: none;
+    color: #56a5eb;
+    transition: all 1s ease;
+    font-size: 20px;
+    align-items: center;
+}
+
+.deve a:hover {
+    color: #ff6565;
+}
+
+.deve a span {
+    border-left: 3px solid #ff6565;
+    padding-left: 5px;
+}
+
+.deve {
+    font-size: 15px;
+    text-align: center;
+}
