@@ -6,9 +6,9 @@
     <title>Gallery</title>
 
     <!-- link the css files, and title img with the html code -->
-    <link rel="stylesheet" href="../adithi_student_4/CSS/Theme_Styles.css">
-    <link rel="stylesheet" href="../adithi_student_4/CSS/Gallery_Styles.css">
-    <link rel="icon" href="../adithi_student_4/Web_page_logo/web_logo.jpg" type="image/jpg" sizes="16x16">
+    <link rel="stylesheet" href="adithi_student_4/CSS/Theme_Styles.css">
+    <link rel="stylesheet" href="adithi_student_4/CSS/Gallery_Styles.css">
+    <link rel="icon" href="adithi_student_4/Web_page_logo/web_logo.jpg" type="image/jpg" sizes="16x16">
 
 </head>
 
@@ -18,7 +18,7 @@
     <div>
         <!-- main navigation links-->
         <nav class="nav-links">
-            <img class="logo" src="../adithi_student_4/Web_page_logo/web_logo.jpg" alt="logo" usemap="#logo">
+            <img class="logo" src="adithi_student_4/Web_page_logo/web_logo.jpg" alt="logo" usemap="#logo">
             <map name="logo">
 		<area shape="circle" coords="45,42,38" href="index.html" alt="logo">
 	</map>
@@ -32,7 +32,7 @@
         </nav>
 
         <!-- dropdown list for change the background color -->
-        <div class="dropdown"><img class="BGimg" src="../adithi_student_4/Logos/bgColor.png" alt="BG Color Change Icon" width="20" height="20" /><br>
+        <div class="dropdown"><img class="BGimg" src="adithi_student_4/Logos/bgColor.png" alt="BG Color Change Icon" width="20" height="20" /><br>
             <button class="dropbtn">Background</button>
             <div class="dropdown-content">
                 <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#ADD8E6">Blue</button>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- dropdown list for change the text color -->
-        <div class="dropdown"><img class="Timg" src="../adithi_student_4/Logos/textColor.png" alt="Text Color Change Icon" width="20" height="20" /><br>
+        <div class="dropdown"><img class="Timg" src="adithi_student_4/Logos/textColor.png" alt="Text Color Change Icon" width="20" height="20" /><br>
             <button class="dropbtn">Text</button>
             <div class="dropdown-content">
                 <button class="dropdownItem" onclick="changeTextColor(this)" value="#89CFF0">Blue</button>
@@ -66,31 +66,31 @@
     <div class="imagesInRow">
         <div class="imageBox">
             <div class="imagesItem">
-                <img class="hover-shadow cursor" id="SigiriyaRock" src="../adithi_student_4/Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+                <img class="hover-shadow cursor" id="SigiriyaRock" src="adithi_student_4/Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
             </div>
         </div>
 
         <div class="imageBox">
             <div class="imagesItem">
-                <img class="hover-shadow cursor" id="GalleFort" src="../adithi_student_4/Gallery_img/Galle_fort.jpg" alt="Galle Fort" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+                <img class="hover-shadow cursor" id="GalleFort" src="adithi_student_4/Gallery_img/Galle_fort.jpg" alt="Galle Fort" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
             </div>
         </div>
 
         <div class="imageBox">
             <div class="imagesItem">
-                <img class="hover-shadow cursor" id="NineArch" src="../adithi_student_4/Gallery_img/9_Arch.jpg" alt="Nine Arch" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+                <img class="hover-shadow cursor" id="NineArch" src="adithi_student_4/Gallery_img/9_Arch.jpg" alt="Nine Arch" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
             </div>
         </div>
 
         <div class="imageBox">
             <div class="imagesItem">
-                <img class="hover-shadow cursor" id="Isurumuniya" src="../adithi_student_4/Gallery_img/Isurumuniya.jpg" alt="Isurumuniya" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+                <img class="hover-shadow cursor" id="Isurumuniya" src="adithi_student_4/Gallery_img/Isurumuniya.jpg" alt="Isurumuniya" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
             </div>
         </div>
 
         <div class="imageBox">
             <div class="imagesItem">
-                <img class="hover-shadow cursor" id="HikkaCorals" src="../adithi_student_4/Gallery_img/Corals_hikka.jpg" alt="Hikkaduwa Corals" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
+                <img class="hover-shadow cursor" id="HikkaCorals" src="adithi_student_4/Gallery_img/Corals_hikka.jpg" alt="Hikkaduwa Corals" width="250" height="190" onmouseover="showWideAreaImage(this);" onclick="navigateToMainImg();">
             </div>
         </div>
 
@@ -100,15 +100,15 @@
 
     <!-- Display the main image in wide area-->
     <div class="mainImgBox" id="mainImg">
-        <img class="image" id="imageAndDescription" src="../adithi_student_4/Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" width="755" height="450">
+        <img class="image" id="imageAndDescription" src="adithi_student_4/Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" width="755" height="450">
         <div class="imageDescription" id="imgtext"></div>
 
         <!-- radio buttons ro change the image -->
-        <input type="image" name="changeImg" id="img1" src="../adithi_student_4/Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" onclick="showWideAreaImage(this);">
-        <input type="image" name="changeImg" id="img2" src="../adithi_student_4/Gallery_img/Galle_fort.jpg" alt="Galle Fort" onclick="showWideAreaImage(this)">
-        <input type="image" name="changeImg" id="img3" src="../adithi_student_4/Gallery_img/9_Arch.jpg" alt="Nine Arch" onclick="showWideAreaImage(this)">
-        <input type="image" name="changeImg" id="img4" src="../adithi_student_4/Gallery_img/Isurumuniya.jpg" alt="Isurumuniya" onclick="showWideAreaImage(this)">
-        <input type="image" name="changeImg" id="img5" src="../adithi_student_4/Gallery_img/Corals_hikka.jpg" alt="Hikkaduwa Corals" onclick="showWideAreaImage(this)">
+        <input type="image" name="changeImg" id="img1" src="adithi_student_4/Gallery_img/Sigiriya.jpg" alt="Sigiriya Rock Fortress" onclick="showWideAreaImage(this);">
+        <input type="image" name="changeImg" id="img2" src="adithi_student_4/Gallery_img/Galle_fort.jpg" alt="Galle Fort" onclick="showWideAreaImage(this)">
+        <input type="image" name="changeImg" id="img3" src="adithi_student_4/Gallery_img/9_Arch.jpg" alt="Nine Arch" onclick="showWideAreaImage(this)">
+        <input type="image" name="changeImg" id="img4" src="adithi_student_4/Gallery_img/Isurumuniya.jpg" alt="Isurumuniya" onclick="showWideAreaImage(this)">
+        <input type="image" name="changeImg" id="img5" src="adithi_student_4/Gallery_img/Corals_hikka.jpg" alt="Hikkaduwa Corals" onclick="showWideAreaImage(this)">
 
         <!-- representative of the radio buttons -->
         <div class="sliderRadioBtns">
@@ -122,7 +122,7 @@
     <br>
 
     <!-- Back to top icon -->
-    <a class="topIcon" id="myBtn" href="#"><img class="topButton" src="../adithi_student_4/Logos/top_icon.jpg" alt="Page up logo" width="40" height="40" /></a>
+    <a class="topIcon" id="myBtn" href="#"><img class="topButton" src="adithi_student_4/Logos/top_icon.jpg" alt="Page up logo" width="40" height="40" /></a>
     <br>
     <hr>
 
@@ -238,7 +238,7 @@
                         <div class="col">
                             <h4><a href="svgSiteMap.html">Sitemap</a></h4>
                         </div>
-                        <img class="footer-logo" src="../adithi_student_4/Web_page_logo/web_logo.jpg" alt="logo">
+                        <img class="footer-logo" src="adithi_student_4/Web_page_logo/web_logo.jpg" alt="logo">
                     </div>
                 </div>
                 <p class="editor">
