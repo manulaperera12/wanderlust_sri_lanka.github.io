@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment Information Form</title>
+    <link rel="stylesheet" href="harini_student_1/Invoice/Invoiceform.css" />
+</head>
+
+<body>
+    <div id="invoice_pane">
+        <center>
+            <br>
+            <table width="650" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="left" valign="top" width="55%">
+                        <span id="customer_details">
+                            <i><small>Invoiced To</small></i><br>
+                            <big><b><span id="customer_name_D"></span></b><br><span id="customer_company_D"></span></big><br>
+                        <span id="customer_address_D"></span><br>
+                        <span id="customer_city_D"></span>, <span id="customer_state_D"></span><br>
+                        <span id="customer_zip_id_D"></span>: <span id="customer_zip_value_D"></span><br>
+                        <b><span id="customer_id_D"></span>: <span id="customer_id_value_D"></span></b>
+                        <br><span id="customer_cid_D"></span> <span id="customer_cid_value_D"></span>
+                        </span>
+                    </td>
+                    <td align="right">
+                        <b><big><span id="vendor_name_D"></span></big></b><br>
+                        <span id="vendor_address_D"></span><br><span id="vendor_city_D"></span>, <span id="vendor_state_D"></span><br>
+                        <span id="vendor_zip_id_D"></span>: <span id="vendor_zip_value_D"></span><br>
+                        <span id="vendor_phone_D"></span><br>
+                        <u><span id="vendor_email_D"></span></u> | <u><span id="vendor_website_D"></span></u><br>
+                        <span id="vendor_cid_D"></span> <span id="vendor_cid_value_D"></span>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table width="650" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="left">
+                        <b><span id="invoice_info_D"></span></b>
+                    </td>
+                    <td align="right" valign="top">
+                        Date: <span id="invoice_date_D"></span><br>
+                        <b>Invoice #: <span id="invoice_number_D"></span></b>
+                    </td>
+                </tr>
+            </table>
+            <table width="650" border="1" cellspacing="0" cellpadding="0">
+                <td valign="top" align="left" width="65%">
+                    <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                        <tbody id="order_items_D">
+                            <tr align="center">
+                                <th>Sl.</th>
+                                <th>Description</th>
+                                <th>Unit Rate</th>
+                                <th>Units</th>
+                                <th>Cost</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="center">
+                    <table width="85%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="left" width="50%"><b>Total Units</b></td>
+                            <td align="left" width="5%">:</td>
+                            <td align="left"><b><span id="total_units_D"></b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> </td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Sub Total</b>(+)</td>
+                            <td align="left">:</td>
+                            <td align="left"><b><span id="sub_total_D"></span></b></td>
+                        </tr>
+                        <tr id="tax_row">
+                            <td align="left">Tax@<span id="tax_rate_D"></span>%(+)</td>
+                            <td align="left">:</td>
+                            <td align="left"><span id="tax_amount_D"></span></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Others(+)</td>
+                            <td align="left">:</td>
+                            <td align="left"><span id="other_charges_D"></span></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Discount(-)</td>
+                            <td align="left">:</td>
+                            <td align="left"><span id="discount_D"></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> </td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>GRAND TOTAL</b>(=)</td>
+                            <td align="left">:</td>
+                            <td align="left"><b><big><span id="currency_D"></span><span id="grand_total_D"></span></big></b></td>
+                        </tr>
+                    </table>
+                </td>
+            </table>
+            <br>
+            <span id="final_note_D"></span><br>
+            <svg id="bar_code_container"></svg>
+            <span class="do_not_print">
+                <br><br><br><button onclick="javascript: window.print();">Print Invoice</button>
+            </span>
+        </center>
+    </div>
+
+    <div id="settings_pane" class="do_not_print">
+        <center><big><b>Invoice Generator</b></big><br>Fill in your personal details in the customer details section</center><br><br>
+        <b>CUSTOMER INFO</b><br> Name:
+        <input type="text" id="customer_name" placeholder="Customer Name" value="Your Name">
+        <br>Address:<input class="input_large" type="text" id="customer_address" placeholder="Address Line 1" value="Address"> City:
+        <input type="text" id="customer_city" placeholder="City Name" value="City">
+        <br>Country:<input type="text" id="customer_state" placeholder="State and Country Details" value="Country">
+        <br>ZIP Code:<input type="text" id="customer_zip_value" placeholder="Actual Area Code" value="ZIP Code">
+        <br>Email Address:<input type="text" id="customer_id_value" placeholder="Email Address/Phone Number" value="Email Address">
+        <br><br>
+        <b>VENDOR INFO</b><br>
+        <input class="input_large" type="text" id="vendor_name" placeholder="Vendor Company Name" value="Wanderlust SriLanka,Inc.">
+        <input class="input_large" type="text" id="vendor_address" placeholder="Address Line 1" value="54/31,Havelock Rd, Colombo 05">
+        <input type="text" id="vendor_city" placeholder="City Name" value="Colombo">
+        <input type="text" id="vendor_state" placeholder="State and Country Details" value="Western, Sri Lanka.">
+        <input type="text" id="vendor_zip_value" placeholder="Actual Area Code" value="00500">
+        <input class="input_large" type="text" id="vendor_phone" placeholder="Support Phone Number" value="+94-751234567">
+        <input type="text" id="vendor_email" placeholder="Support Email Address" value="wanderlustsrilanka@gmail.com">
+        <input type="text" id="vendor_website" placeholder="Website Address" value="www.WanderlustSriLanka.lk">
+        <input type="text" id="vendor_cid" placeholder="Company Number Field Identifier" value="22AAAAA0000A1Z5">
+        <input type="text" id="vendor_cid_value" placeholder="EIN/GST/CIN/VAT/TIN Number" value="2979161654807"><br><br>
+        <b>INVOICE INFO</b><br>
+        <input class="input_large" type="text" id="invoice_info" placeholder="Any Instructions or Information" value="HOME DELIVERY">
+        <input type="text" id="invoice_date" placeholder="Enter Date Manually"> default: Today's date<br>
+        <input type="text" id="invoice_number" placeholder="Enter Invoice # Manually"> default: YYYYMMDDHH-minute<br>
+        <input type="text" id="tax_rate" placeholder="% Tax on Sub Total" value="5.5"> Tax Rate: Leave Blank to Remove<br>
+        <input type="text" id="currency" placeholder="Currency Symbol"><br>
+        <input type="text" id="other_charges" placeholder="Other Charges" value="1"> Other Charges<br>
+        <input type="text" id="discount" placeholder="Discount Amount" value="1"> Discount Amount<br>
+        <input class="input_large" type="text" id="final_note" placeholder="Final Note" value="This is a computer generated invoice and needs no signature"><br><br>
+        <b>ITEMS LIST</b><b>&nbsp;(To add items please click the right button)</b><span id="add_new_item_button"><u>&nbsp;Add Another Item</u></span><br>
+        <span id="order_items"></span><br><br>
+    </div>
+    <!--Currency Convertor-->
+    <script defer src="harini_student_1/Invoice/Invoiceform.js"></script>
+</body>
+
+</html>

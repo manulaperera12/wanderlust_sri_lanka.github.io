@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800,300italic,400italic,600italic);
+
+
+head{
+	text-align: center;
+}
+
+body{
+	font-family:'Courier', 'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode';
+	color:#4F5155;font-size:11px;
+}
+
+table{
+	text-align:justify;
+}
+
+input{
+	padding:3px;
+	margin:3px;
+	width:45%;
+}
+
+.input_large{
+	width:90%;
+}
+            
+.input_small{
+	width:20%
+}
+            
+#invoice_pane{
+	position:fixed;
+	top:0;
+	left:0;
+	width:750px;
+	height:100%;
+}
+
+#settings_pane{
+	position:absolute;
+	top:0;left:770px;
+	width:calc(98% - 770px);
+	height:auto;
+	border-left:2px solid #d8d8d8;
+	font-size: 12px;
+	padding:5px;
+}
+
+#page_end_msg{
+	position:absolute;
+	bottom:20px;
+	left:210px;
+	width:300px;
+	height:auto;
+	background-color:rgba(18,18,18,0.85);
+	border-radius:25px;
+	padding:15px;
+	font-size:12px;
+}
+
+#page_end_msg .heading{
+	display:block;
+	color:#fff;
+	padding-bottom:5px;
+	font-weight:600;
+}
+            
+#page_end_msg .text{
+	display:block;
+	color:#999;
+}
+
+#page_end_msg .links{
+	display:block;
+	color:#fff;
+	padding-top:5px;
+}
+
+#page_end_msg .links a{
+	color:#fff;
+}
+
+@media print{.do_not_print{
+	display:none;}
+}
+

@@ -1,0 +1,161 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url('F:/Images/island.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+.lists{
+	height: 50px;
+	width: 400px;
+	background-color: rgb(18, 175, 218);
+	margin: 1em;
+	display: flex;
+	align-items: center;
+	box-shadow: 0em 0.4em 0.5em rgba(0, 0, 0, 0.5);
+	position: relative;
+	
+}
+
+.team{
+	height: 45px;
+	width: 250px;
+	background-color: rgb( 6, 37, 121);
+	margin: 1em;
+	display: flex;
+	align-items: center;
+	box-shadow: 0em 0.4em 0.5em rgba(0, 0, 0, 0.5);
+	position: relative;
+	
+}
+
+h2{
+	width: 100%;
+	text-align: center;
+	color: white;
+	
+}
+
+.lists::before{
+	content: "";
+	width: 30px;
+	height: 50px;
+	background-color: rgb( 6, 37, 121);;
+	margin: 1em;
+	display: block;
+	position: absolute;
+	
+}
+
+.lists:nth-child(2n)::before{
+	right: 0px;
+}
+
+h3{
+	width: 100%;
+	text-align: center;
+	color: white;
+	
+}
+
+.lists::after{
+	content: attr(title);
+	position: absolute;
+	font-size: 1.5em;
+	color: white;
+	padding: 1em;
+	font-weight: bold;
+	
+}
+
+.lists:nth-child(2n)::after{
+	right: 0px;
+}
+
+.lists:nth-child(2n+1){
+	animation: slideright 5s linear;
+}
+
+@keyframes slideright{
+	from{
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+}
+
+.lists:nth-child(2n){
+	animation: slideleft 5s linear;
+}
+
+@keyframes slideleft{
+	from{
+		opacity: 0;
+		transform: translateX(20px);
+	}
+}
+
+
+/* Splash screen */
+
+.intro{
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	position: fixed; 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('F:/Images/island.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: 4s;
+}
+
+
+.logo-header{
+	position: absolute;
+	z-index: 1;
+	left: 53%;
+	top: 19%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 53px;
+	
+}
+
+.logo{
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+}
+
+.logo.active{
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 0.5s;
+
+}
+
+.logo.fade{
+	bottom: 150px;
+	opacity: 0;
+	transition: ease-in-out 0.5s;
+}
+
+
+	
+	
+	
