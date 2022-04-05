@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/island.jpg");
+    background-image: url("Images/island.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
