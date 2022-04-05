@@ -212,7 +212,7 @@ a:hover {
     transform: translate(-50%, -50%) scale(0);
     background: #fff;
     width: 900px;
-    height: 700px;
+    height: 680px;
     z-index: 2;
     overflow-y: scroll;
     text-align: center;
@@ -312,7 +312,7 @@ a:hover {
 }
 
 .resultText {
-    align-items: center center;
+    align-items: center;
 }
 
 .parent {
