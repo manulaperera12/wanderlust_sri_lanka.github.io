@@ -107,7 +107,8 @@
             <span id="final_note_D"></span><br>
             <svg id="bar_code_container"></svg>
             <span class="do_not_print">
-                <br><br><br><button onclick="javascript: window.print();">Print Invoice</button>
+                <br><br><button onclick="javascript: window.print();">Print Invoice</button>
+			    <br><br><button onclick="location.href='https://manulaperera12.github.io/wanderlust_sri_lanka.github.io/'">Go back to Home page</button><br><br>
             </span>
         </center>
     </div>
@@ -115,12 +116,12 @@
     <div id="settings_pane" class="do_not_print">
         <center><big><b>Invoice Generator</b></big><br>Fill in your personal details in the customer details section</center><br><br>
         <b>CUSTOMER INFO</b><br> Name:
-        <input type="text" id="customer_name" placeholder="Customer Name" value="Your Name">
-        <br>Address:<input class="input_large" type="text" id="customer_address" placeholder="Address Line 1" value="Address"> City:
-        <input type="text" id="customer_city" placeholder="City Name" value="City">
-        <br>Country:<input type="text" id="customer_state" placeholder="State and Country Details" value="Country">
-        <br>ZIP Code:<input type="text" id="customer_zip_value" placeholder="Actual Area Code" value="ZIP Code">
-        <br>Email Address:<input type="text" id="customer_id_value" placeholder="Email Address/Phone Number" value="Email Address">
+        <input type="text" id="customer_name" placeholder="Your Name">
+        <br>Address:<input class="input_large" type="text" id="customer_address" placeholder="Address"> City:
+        <input type="text" id="customer_city" placeholder="City">
+        <br>Country:<input type="text" id="customer_state" placeholder="Country">
+        <br>ZIP Code:<input type="text" id="customer_zip_value" placeholder="ZIP Code">
+        <br>Email Address:<input type="text" id="customer_id_value" placeholder="Email Address">
         <br><br>
         <b>VENDOR INFO</b><br>
         <input class="input_large" type="text" id="vendor_name" placeholder="Vendor Company Name" value="Wanderlust SriLanka,Inc.">
@@ -142,7 +143,7 @@
         <input type="text" id="other_charges" placeholder="Other Charges" value="1"> Other Charges<br>
         <input type="text" id="discount" placeholder="Discount Amount" value="1"> Discount Amount<br>
         <input class="input_large" type="text" id="final_note" placeholder="Final Note" value="This is a computer generated invoice and needs no signature"><br><br>
-        <b>ITEMS LIST</b><b>&nbsp;(To add items please click the right button)</b><span id="add_new_item_button"><u>&nbsp;Add Another Item</u></span><br>
+        <b>ITEMS LIST</b><b>&nbsp;(To add items please click the below button)</b><input type=button value='Add New Item' span id="add_new_item_button"></span><br>
         <span id="order_items"></span><br><br>
     </div>
     <!--Currency Convertor-->
